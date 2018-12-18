@@ -1,0 +1,79 @@
+/* pages/apply/applySuccess/applySuccess.wxss */
+
+.group {
+  text-align: center;
+  padding: 0 40rpx;
+}
+
+.group:first-child {
+  padding-top: 172rpx;
+}
+
+.group:nth-child(2) {
+  padding: 54rpx 0 204rpx;
+  font-size: 18px;
+}
+
+.group:nth-child(3) {
+  font-size: 16px;
+  color:#207ce9;
+}
+
+.group:nth-child(3) button {
+  text-align: center;
+  background-color: #FFF;
+  font-size: 16px;
+  color:#207ce9;
+}
+
+.group:nth-child(4) {
+  padding-bottom: 40rpx;
+  /* margin-bottom: 10px; */
+}
+
+.group:nth-child(4) button {
+  /* height: 46px;
+  line-height: 46px; */
+  font-size: 16px;
+  color: #fff;
+  background-color: #207ce9;
+}
+
+.group:nth-child(5) {
+  height: 40px;
+  color: #4a4a4a;
+}
+
+.group:nth-child(5) button {
+  height: 40px;
+  line-height: 40px;
+}
+
+.group_bottom{
+  width: 105%;
+  position: fixed;
+  bottom: 0;
+  background-color: #FFF;
+  padding: 20rpx 0;
+}
+
+.long_press {
+  text-align: center;
+  font-size: 12px;
+  line-height: auto;
+  color: #4a4a4a;
+}
+
+.two_bar_code {
+  width: 218rpx;
+  height: 218rpx;
+  margin: 10rpx auto;
+  background-color: #DEDEDE;
+}
+
+.instant_tip{
+  text-align: center;
+  font-size: 12px;
+  line-height: 20px;
+  color: #207ce9;
+}

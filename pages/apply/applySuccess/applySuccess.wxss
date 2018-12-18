@@ -1,0 +1,35 @@
+/* pages/apply/applySuccess/applySuccess.wxss */
+
+.group {
+  text-align: center;
+  padding: 0 40rpx;
+}
+
+.group:first-child {
+  padding-top: 144rpx;
+}
+
+.group:nth-child(2) {
+  padding: 20rpx 0;
+  font-size: 18px;
+}
+
+.group:nth-child(3) {
+  padding-bottom: 60rpx;
+  font-size: 14px;
+  text-align: center;
+}
+
+.group:nth-child(4) {
+  padding-bottom: 40rpx;
+}
+
+.group:nth-child(4) button {
+  font-size: 16px;
+  color: #fff;
+  background-color: #207ce9;
+}
+
+.group:nth-child(5){
+  color: #4a4a4a;
+}

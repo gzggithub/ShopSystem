@@ -1,0 +1,78 @@
+<!--pages/mine/detail/detail.wxml-->
+<view class="mine_detail_container">
+  <view class="detail_item">
+    <view class="detail_item_left">头像：</view>
+    <view class="detail_item_right">
+      <image src='{{userInfo.avatarUrl}}' class='mine_header_head_one_img' bindtap='changeAvatar'></image>
+    </view>
+  </view>
+  <!-- <navigator url='./modify/modify'> -->
+  <view class="detail_item">
+    <view class="detail_item_left">姓名：</view>
+    <view class="detail_item_right" bindtap='changeName'>{{nickName}}</view>
+  </view>
+  <!-- </navigator> -->
+
+  <modal style='width:280px;height:157px;' hidden="{{hiddenNickNamePut}}" title="姓名" confirm-text="确认" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input class='modalInput' type='text' placeholder="请输入姓名" bindinput='inputNickName' value='{{nickName}}' auto-focus/>
+  </modal>
+
+  <view class="detail_item">
+    <view class="detail_item_left">性別：</view>
+    <view class="detail_item_right">
+      <picker bindchange="bindViewEvent" data-model="component" data-method="bindSelect" data-name="index" value='{{index}}' range="{{gender}}">
+        <view class="label-right">
+          {{gender[index]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
+  <view class="detail_item">
+    <view class="detail_item_left">出生年月：</view>
+    <view class="detail_item_right">
+      <picker mode="date" value="{{date}}" start="1970-01-01" end="2100-12-31" bindchange="bindDateChange">
+          <view class="picker">
+            {{date}}
+          </view>
+        </picker>
+    </view>
+
+  </view>
+
+  <!-- <modal style='width:280px;height:157px;' hidden="{{hiddenTelNumPut}}" title="电话号码" confirm-text="确认" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input class='modalInput' name="tel" placeholder="" bindinput='inputTelNum' value='{{telNum}}' />
+  </modal> -->
+
+  <view class="detail_item" style='border:none'>
+    <view class="detail_item_left">电话号码：</view>
+    <view class="detail_item_right" bindtap='changeTelNum'>{{telNum}}</view>
+  </view>
+
+  <modal style='width:280px;height:157px;' hidden="{{hiddenTelNumPut}}" title="电话号码" confirm-text="确认" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input class='modalInput' name="tel" placeholder="" bindinput='inputTelNum' value='{{telNum}}' />
+  </modal>
+
+  <!-- <view class="detail_item">
+    <view class="detail_item_left">地区：</view>
+    <view class="detail_item_right">{{userInfo.province}} {{userInfo.city}}</view>
+  </view> -->
+
+  <!-- <view class="detail_item">
+    <view class="detail_item_left">所属单位：</view>
+    <view class="detail_item_right" bindtap="changeCompany">{{userInfo.company}}</view>
+  </view> -->
+
+  <!-- <modal hidden="{{hiddenCompanyPut}}" title="所属单位" confirm-text="确认" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input class='modalInput' type='text' bindinput='inputCompany' placeholder="" value='{{company}}' auto-focus/>
+  </modal> -->
+
+  <!-- <view class="detail_item">
+    <view class="detail_item_left">个性签名：</view>
+    <view class="detail_item_right" bindtap='changeSign'>{{userInfo.remark}}</view>
+  </view> -->
+
+  <!-- <modal hidden="{{hiddenSignPut}}" title="个性签名" confirm-text="确认" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input class='modalInput' type='text' placeholder="请输入签名" bindinput='inputSign' value='{{remark}}' auto-focus/>
+  </modal> -->
+</view>

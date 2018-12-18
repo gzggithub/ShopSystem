@@ -1,0 +1,52 @@
+/* pages/template/tabBar.wxss */
+
+.icon {
+  width: 54rpx;
+  height: 54rpx;
+}
+
+.tabBar {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 10rpx;
+  margin-left: -4rpx;
+  background: #fff;
+  font-size: 20rpx;
+  color: #8a8a8a;
+  box-shadow: 6rpx 6rpx 6rpx 6rpx #aaa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tabBar-item {
+  flex: 1;
+  /* height: 76px; */
+  /* width: 33.3%; */
+  text-align: center;
+  overflow: hidden;
+}
+
+/*当前字体颜色*/
+
+.tabBartext {
+  color: #207ce9;
+}
+
+.tabBartextChange{
+  margin-top: 28px;
+}
+
+.plus_wp {
+  /* position: relative; */
+  /* margin-top: -45rpx; */
+}
+
+.plus_icon {
+  /* position: absolute; */
+  width: 100rpx;
+  height: 100rpx;
+  
+  /* z-index: 999999; */
+}

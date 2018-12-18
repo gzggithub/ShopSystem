@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/newApply/newApply",
+    "pages/mine/mine",
+    "pages/index/index",
+    "pages/index/detail/detail",
+    "pages/mine/detail/detail",
+    "pages/mine/detail/modify/modify",
+    "pages/newApply/identityInformation/identityInformation",
+    "pages/newApply/visitedInformation/visitedInformation",
+    "pages/newApply/applySuccess/applySuccess",
+    "pages/apply/apply",
+    "pages/apply/newApply/newApply",
+    "pages/apply/identityInformation/identityInformation",
+    "pages/apply/visitedInformation/visitedInformation",
+    "pages/apply/applySuccess/applySuccess",
+    "pages/history/history",
+    "pages/template/tabbar/tabBar",
+    "pages/first/first",
+    "pages/info/info",
+    "pages/logs/logs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "人脸注册",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

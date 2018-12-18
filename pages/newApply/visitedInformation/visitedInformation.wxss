@@ -1,0 +1,27 @@
+/* pages/apply/visitedInformation/visitedInformation.wxss */
+.detail_item {
+  height: 116rpx;
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.detail_item:last-child {
+  border-bottom: none;
+}
+
+.detail_item_left {
+  width: 80px;
+  font-size: 16px;
+  color: #4a4a4a;
+}
+
+.detail_item_right{
+  flex: 1;
+  text-align: right;
+  font-size: 16px;
+  color: #4a4a4a;
+}

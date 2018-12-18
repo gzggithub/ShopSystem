@@ -1,0 +1,425 @@
+<!--pages/history/history.wxml-->
+<view class="history_container">
+  <!-- <view class='create_apply' bindtap='applay'>
+    <view class='create_apply_inner'>
+      <view class='create_apply_inner_circul'>+</view>
+    </view>
+  </view> -->
+
+  <!--顶部导航 start  -->
+  <view class="history_swiper_tab">
+    <view class="history_swiper_tab_list {{currentTab==0 ? 'on_orange' : ''}}" data-current="0" bindtap="switchNav">等待</view>
+    <view class="history_swiper_tab_list {{currentTab==1 ? 'on_blue' : ''}}" data-current="1" bindtap="switchNav">通过</view>
+    <view class="history_swiper_tab_list {{currentTab==2 ? 'on_red' : ''}}" data-current="2" bindtap="switchNav">拒绝</view>
+  </view>
+
+  <swiper current="{{currentTab}}" duration="300" bindchange="bindChange" class='history_swiper1_box' style="height: {{clientHeight?clientHeight+'px':'auto'}}" wx:if='{{true}}'>
+    <!-- <block wx:for="{{}}" class="shop_swiper_item"> -->
+    <swiper-item>
+      <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+        <view class='history_big_box'>
+          <view class='history_big_month'>4月</view>
+          <!-- <view class="history_big_item" bindtap="clickLogin">
+          <view class='history_order circul_orange'>1</view>
+          <view class='history_big_item_a'>
+            <view class="history_company">访问浙江中烟工业有限责任公司</view>
+            <view class="history_time">5月23日 上午9:10</view>
+          </view>
+        </view> -->
+
+          <!-- <block wx:for='{{items}}' wx:key="">
+            <navigator url="../index/detail/detail" hover-class="navigator-hover">
+              <view class="touch_item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+                <view class='content flex'>
+                  <view class='history_order circul_orange'>{{index+1}}</view>
+                  <view>
+                    <view class="content_company">{{item.content}}</view>
+                    <view class="content_time">{{item.date}}</view>
+                  </view>
+                </view>
+                <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+              </view>
+            </navigator>
+
+            <view class='gray_line'></view>
+          </block> -->
+
+          <block wx:for='{{items}}' wx:key="">
+            <navigator url="../index/detail/detail" hover-class="navigator-hover">
+              <view class="touch_item" bindlongpress="deleteRecord" data-index="{{index}}">
+                <view class='content flex'>
+                  <view class='history_order circul_orange'>{{index+1}}</view>
+                  <view>
+                    <view class="content_company">{{item.content}}</view>
+                    <view class="content_time">{{item.date}}</view>
+                  </view>
+                </view>
+                <!-- <view class="del" catchtap="del" data-index="{{index}}">删除</view> -->
+              </view>
+            </navigator>
+
+            <view class='gray_line'></view>
+          </block>
+          <!-- <view class='history_big_item'>
+          <view class='history_order circul_orange'>2</view>
+          <view class='history_big_item_a'>
+            <view class="history_company">访问浙江中烟工业有限责任公司</view>
+            <view class="history_time">5月23日 上午9:10</view>
+          </view>
+        </view>
+        <view class='history_big_item'>
+          <view class='history_order circul_orange'>3</view>
+          <view class='history_big_item_a'>
+            <view class="history_company">访问浙江中烟工业有限责任公司</view>
+            <view class="history_time">5月23日 上午9:10</view>
+          </view>
+        </view> -->
+        </view>
+        <view class='history_big_box'>
+          <view class='history_big_month'>3月</view>
+          <block wx:for='{{items}}' wx:key="">
+            <navigator url="../index/detail/detail" hover-class="navigator-hover">
+              <view class="touch_item" bindlongpress="deleteRecord" data-index="{{index}}">
+                <view class='content flex'>
+                  <view class='history_order circul_orange'>{{index+1}}</view>
+                  <view>
+                    <view class="content_company">{{item.content}}</view>
+                    <view class="content_time">{{item.date}}</view>
+                  </view>
+                </view>
+                <!-- <view class="del" catchtap="del" data-index="{{index}}">删除</view> -->
+              </view>
+            </navigator>
+
+            <view class='gray_line'></view>
+          </block>
+
+          <!-- <block wx:for='{{items}}' wx:key="">
+            <navigator url="../index/detail/detail" hover-class="navigator-hover">
+              <view class="touch_item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+                <view class='content flex'>
+                  <view class='history_order circul_orange'>{{index+1}}</view>
+                  <view>
+                    <view class="content_company">{{item.content}}</view>
+                    <view class="content_time">{{item.date}}</view>
+                  </view>
+                </view>
+                <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+              </view>
+            </navigator>
+
+            <view class='gray_line'></view>
+          </block> -->
+
+          <!-- <view class='history_big_item'>
+          <view class='history_order circul_orange'>1</view>
+          <view class='history_big_item_a'>
+            <view class="history_company">访问浙江中烟工业有限责任公司</view>
+            <view class="history_time">5月23日 上午9:10</view>
+          </view>
+        </view>
+        <view class='history_big_item'>
+          <view class='history_order circul_orange'>2</view>
+          <view class='history_big_item_a'>
+            <view class="history_company">访问浙江中烟工业有限责任公司</view>
+            <view class="history_time">5月23日 上午9:10</view>
+          </view>
+        </view> -->
+        </view>
+        <view class='history_big_box'>
+          <view class='history_big_month'>2月</view>
+          <block wx:for='{{items}}' wx:key="">
+            <navigator url="../index/detail/detail" hover-class="navigator-hover">
+              <view class="touch_item" bindlongpress="deleteRecord" data-index="{{index}}">
+                <view class='content flex'>
+                  <view class='history_order circul_orange'>{{index+1}}</view>
+                  <view>
+                    <view class="content_company">{{item.content}}</view>
+                    <view class="content_time">{{item.date}}</view>
+                  </view>
+                </view>
+                <!-- <view class="del" catchtap="del" data-index="{{index}}">删除</view> -->
+              </view>
+            </navigator>
+
+            <view class='gray_line'></view>
+          </block>
+
+          <!-- <block wx:for='{{items}}' wx:key="">
+            <navigator url="../index/detail/detail" hover-class="navigator-hover">
+              <view class="touch_item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+                <view class='content flex'>
+                  <view class='history_order circul_orange'>{{index+1}}</view>
+                  <view>
+                    <view class="content_company">{{item.content}}</view>
+                    <view class="content_time">{{item.date}}</view>
+                  </view>
+                </view>
+                <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+              </view>
+            </navigator>
+
+            <view class='gray_line'></view>
+          </block> -->
+
+          <!-- <view class='history_big_item'>
+            <view class='history_order circul_orange'>1</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view> -->
+        </view>
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+        <view class='history_big_box'>
+          <view class='history_big_month'>4月</view>
+
+          <block wx:for='{{items}}' wx:key="">
+            <navigator url="../index/detail/detail" hover-class="navigator-hover">
+              <view class="touch_item" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+                <view class='content flex'>
+                  <view class='history_order circul_blue'>{{index+1}}</view>
+                  <view>
+                    <view class="content_company">{{item.content}}</view>
+                    <view class="content_time">{{item.date}}</view>
+                  </view>
+                </view>
+                <!-- <view class="del" catchtap="del" data-index="{{index}}">删除</view> -->
+              </view>
+            </navigator>
+
+            <view class='gray_line'></view>
+          </block>
+
+          <!-- <view class='history_big_item'>
+            <view class='history_order circul_blue'>1</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view>
+          <view class='history_big_item'>
+            <view class='history_order circul_blue'>2</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view>
+          <view class='history_big_item'>
+            <view class='history_order circul_blue'>3</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view> -->
+        </view>
+        <view class='history_big_box'>
+          <view class='history_big_month'>3月</view>
+          <block wx:for='{{items}}' wx:key="">
+            <navigator url="../index/detail/detail" hover-class="navigator-hover">
+              <view class="touch_item" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+                <view class='content flex'>
+                  <view class='history_order circul_blue'>{{index+1}}</view>
+                  <view>
+                    <view class="content_company">{{item.content}}</view>
+                    <view class="content_time">{{item.date}}</view>
+                  </view>
+                </view>
+                <!-- <view class="del" catchtap="del" data-index="{{index}}">删除</view> -->
+              </view>
+            </navigator>
+
+            <view class='gray_line'></view>
+          </block>
+
+          <!-- <view class='history_big_item'>
+            <view class='history_order circul_blue'>1</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view>
+          <view class='history_big_item'>
+            <view class='history_order circul_blue'>2</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view> -->
+        </view>
+        <!-- <view class='history_big_box'>
+          <view class='history_big_month'>2月</view>
+          <view class='history_big_item'>
+            <view class='history_order circul_blue'>1</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view>
+        </view> -->
+
+      </scroll-view>
+    </swiper-item>
+
+    <swiper-item>
+      <scroll-view scroll-y="{{true}}" style="height: {{clientHeight?clientHeight+'px':'auto'}}">
+        <view class='history_big_box'>
+          <view class='history_big_month'>4月</view>
+          <block wx:for='{{items}}' wx:key="">
+            <navigator url="../index/detail/detail" hover-class="navigator-hover">
+              <view class="touch_item" bindlongpress="deleteRecord" data-index="{{index}}">
+                <view class='content flex'>
+                  <view class='history_order circul_orange'>{{index+1}}</view>
+                  <view>
+                    <view class="content_company">{{item.content}}</view>
+                    <view class="content_time">{{item.date}}</view>
+                  </view>
+                </view>
+                <!-- <view class="del" catchtap="del" data-index="{{index}}">删除</view> -->
+              </view>
+            </navigator>
+
+            <view class='gray_line'></view>
+          </block>
+
+          <!-- <block wx:for='{{items}}' wx:key="">
+            <navigator url="../index/detail/detail" hover-class="navigator-hover">
+              <view class="touch_item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+                <view class='content flex'>
+                  <view class='history_order circul_blue'>{{index+1}}</view>
+                  <view>
+                    <view class="content_company">{{item.content}}</view>
+                    <view class="content_time">{{item.date}}</view>
+                  </view>
+                </view>
+                <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+              </view>
+            </navigator>
+
+            <view class='gray_line'></view>
+          </block> -->
+
+
+          <!-- <view class='history_big_item'>
+            <view class='history_order circul_red'>1</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view>
+          <view class='history_big_item'>
+            <view class='history_order circul_red'>2</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view>
+          <view class='history_big_item'>
+            <view class='history_order circul_red'>3</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view> -->
+        </view>
+        <!-- <view class='history_big_box'>
+          <view class='history_big_month'>3月</view>
+          <view class='history_big_item'>
+            <view class='history_order circul_red'>1</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view>
+          <view class='history_big_item'>
+            <view class='history_order circul_red'>2</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view>
+        </view>
+        <view class='history_big_box'>
+          <view class='history_big_month'>2月</view>
+          <view class='history_big_item'>
+            <view class='history_order circul_red'>1</view>
+            <view class='history_big_item_a'>
+              <view class="history_company">访问浙江中烟工业有限责任公司</view>
+              <view class="history_time">5月23日 上午9:10</view>
+            </view>
+          </view>
+        </view> -->
+      </scroll-view>
+    </swiper-item>
+
+    <!-- <swiper-item>
+      <view class='history_big_box'>
+        <block wx:for='{{boxListItem}}' class=''>
+          <view class='history_big_box_item'>
+            <view class='history_big_box_top'>
+              <view class='history_big_box_top_name'>4月</view>
+            </view>
+
+            <view class='history_big_box_bottom'>
+              <block>
+                <view class='history_big_box_bottom_buy'>h洪波</view>
+              </block>
+            </view>
+
+          </view>
+        </block>
+      </view>
+    </swiper-item> -->
+
+    <!-- <swiper-item>
+      <view class='history_big_box'>
+        <block wx:for='{{boxListItem2}}' class=''>
+          <view class='history_big_box_item'>
+            <view class='history_big_box_top'>
+              <view class='history_big_box_top_name'>{{item.name}}</view>
+              <view class='history_big_box_top_mul'>{{item.mul}}</view>
+              <view class='history_big_box_top_dollar'>{{item.dollars}}</view>
+            </view>
+            <view class='history_big_box_bottom'>
+                <view class='history_big_box_bottom_buy'></view>
+              <view class='history_big_box_bottom_give'></view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </swiper-item>
+
+    <swiper-item>
+      <view class='shop_big_box'>
+        <block wx:for='{{boxListItem3}}' class=''>
+          <view class='history_big_box_item'>
+            <view class='history_big_box_top'>
+              <view class='history_big_box_top_name'>{{item.name}}</view>
+              <view class='history_big_box_top_mul'>{{item.mul}}</view>
+              <view class='history_big_box_top_dollar'>{{item.dollars}}</view>
+            </view>
+            <view class='history_big_box_bottom'>
+              <view class='history_big_box_bottom_buy'></view>
+              <view class='history_big_box_bottom_give'></view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </swiper-item> -->
+    <!-- </block> -->
+  </swiper>
+
+  <view class='no_history_record' wx:if='{{false}}'>
+    <view class='no_record'>
+      暂无记录
+      <!-- <image src=''></image> -->
+    </view>
+    <view class='click_apply' bindtap='click_apply'>
+      <button class='click_apply_btn' bindtap='click_apply'>点击申请</button>
+    </view>
+  </view>
+</view>

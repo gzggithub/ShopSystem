@@ -1,0 +1,21 @@
+<!--pages/apply/applySuccess/applySuccess.wxml-->
+<view class='applySuccess_container'>
+  <view class="group">
+    <icon type="success" size="70" color='#42a0ff' />
+  </view>
+  <view class="group">
+    <text>申请已提交成功</text>
+  </view>
+  <view class="group">
+    <text>我们会在1-3个工作日内进行审核，请耐心等待。</text>
+  </view>
+
+  <view class="group">
+    <button bindtap='goon_apply'>继续申请</button>
+  </view>
+  
+  
+  <view class="group">
+    <button bindtap='back_home'>返回首页</button>
+  </view>
+</view>

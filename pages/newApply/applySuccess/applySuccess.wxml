@@ -1,0 +1,29 @@
+<!--pages/apply/applySuccess/applySuccess.wxml-->
+<view class='applySuccess_container'>
+  <view class="group">
+    <icon type="success" size="70" color='#46c20c' />
+  </view>
+  <view class="group">
+    <text>注册成功</text>
+  </view>
+  <!-- <view class="group">
+    <text>我们会在1-3个工作日内进行审核，请耐心等待。</text>
+  </view> -->
+
+  <!-- <view class="group">
+    <button bindtap='goon_apply'>继续申请</button>
+  </view> -->
+
+
+  <view class="group">
+    <button bindtap='back_home'>返回首页</button>
+  </view>
+
+  <!-- <view class="group_bottom">
+    <view class='long_press'>长按识别下面图中二维码</view>
+    <view class='two_bar_code'>
+      <image src='' alt='' />
+    </view>
+    <view class='instant_tip'>关注公众号获取访问消息即时通知</view>
+  </view> -->
+</view>

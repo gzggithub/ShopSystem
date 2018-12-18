@@ -1,0 +1,28 @@
+<!--pages/template/tabBar.wxml-->
+<template name="tabBar">
+  <view class="tabBar">
+    <block wx:for="{{tabBar}}" wx:for-item="item" wx:key="tabBar">
+      <view class="tabBar-item" wx:if="{{item.style==0}}">
+        <navigator open-type="redirect" url="{{item.pagePath}}">
+          <view>
+            <image class="icon" src='{{item.iconPath}}'></image>
+          </view>
+          <view class="{{item.current== 1 ? 'tabBartext' :''}}">{{item.text}}</view>
+        </navigator>
+      </view>
+
+      <view class="tabBar-item" wx:if="{{item.style==1}}">
+        <navigator open-type="redirect" url="{{item.pagePath}}">
+          <view class="plus_wp">
+            <view class='create_apply' bindtap='applay'>
+              <view class='create_apply_inner'>+
+                <!-- <view class='create_apply_inner_circul'></view> -->
+              </view>
+            </view>
+          </view>
+          <view class="tabBartextChange {{item.current== 1 ? 'tabBartext' :''}}">{{item.text}}</view>
+        </navigator>
+      </view>
+    </block>
+  </view>
+</template>

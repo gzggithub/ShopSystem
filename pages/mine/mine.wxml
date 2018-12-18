@@ -1,0 +1,84 @@
+<!--pages/mine/mine.wxml-->
+<import src="../../template/tabbar/tabBar.wxml"/>
+
+<view class="mine_container">
+  <!-- <view class="mine_header">
+    <view class="mine_header_head">
+      <view class="mine_header_head_left">头像</view>
+      <view class="mine_header_head_right">
+        <view class="mine_header_head_top">
+          <view class="mine_header_head_name">张三</view>
+          <view class="mine_header_head_location">杭州</view>
+        </view>
+        <view class="mine_header_head_company">杭州快豹科技有限公司</view>
+      </view>
+    </view>
+  </view> -->
+
+  <view class="mine_header_one login" bindtap='clickLogin' wx:if='{{!hasLogin}}'>登录</view>
+
+  <view class="mine_header_one" wx:if='{{hasLogin}}'>
+    <view class="mine_header_head_one">
+      <image src='{{userInfo.avatarUrl}}' class='mine_header_head_one_img'></image>
+    </view>
+    <view class="mine_header_head_two">
+      <view class="mine_header_head_name">{{userInfo.nickName}}</view>
+      <view class="mine_header_head_location_icon"><image src='../../image/location.png'></image></view>
+      <view class="mine_header_head_location">{{userInfo.city}}</view>
+    </view>
+    <view class="mine_header_head_company">{{userInfo.company}}杭州快豹科技有限公司</view>
+  </view>
+
+  <!-- <view class="mine_state_L">
+    <view class="mine_state">
+      <view class="mine_state_wait">
+        <navigator url="../history/history" hover-class="navigator-hover">
+          <view class="mine_state_wait_num font_orange">5</view>
+          <view class="mine_state_wait_text">等待</view>
+        </navigator>
+      </view>
+      <view class="mine_state_pass">
+        <navigator url="../history/history" hover-class="navigator-hover">
+          <view class="mine_state_wait_num font_blue">10</view>
+          <view class="mine_state_wait_text">通过</view>
+        </navigator>
+      </view>
+
+      <view class="mine_state_reject">
+        <navigator url="../history/history" hover-class="navigator-hover">
+          <view class="mine_state_wait_num font_red">12</view>
+          <view class="mine_state_wait_text">拒绝</view>
+        </navigator>
+      </view>
+    </view>
+
+  </view> -->
+  
+  <view class="mine_main">
+    <!-- <navigator url="./detail/detail"> -->
+      <view class="mine_main_item" bindtap='getInfo'>
+        <view class="min_main_item_left">
+          <image src='../../image/location.png'></image>
+        </view>
+        <view class="mine_main_item_center">个人信息</view>
+        <view class="mine_main_item_right"></view>
+      </view>
+    <!-- </navigator> -->
+    <!-- <navigator url="../history/history"> -->
+      <!-- <view class="mine_main_item" bindtap='getHistory'>
+        <view class="min_main_item_left">
+          <image src='../../image/location.png'></image>
+        </view>
+        <view class="mine_main_item_center">历史记录</view>
+        <view class="mine_main_item_right"></view>
+      </view> -->
+    <!-- </navigator> -->
+  </view>
+
+  <!-- <view class="mine_loginout">
+    <navigator url="./detail/detail">退出登录</navigator>
+  </view> -->
+
+</view>
+
+<!-- <template is="tabBar" data="{{tabBar:bindData.tabBar}}"/> -->

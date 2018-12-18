@@ -1,0 +1,8 @@
+<!--pages/home/home.wxml-->
+<view class="apply_container" style='width:100%;height:{{winHeight}}px;background-color: #F5F7FA'>
+  <view class="apply_main">
+    <button open-type="getUserInfo" class='' bindgetuserinfo="getUserInfo" style='padding:0;border-radius:100%;'>
+      <view class='apply_main_mul'>注册</view>
+    </button>
+  </view>
+</view>

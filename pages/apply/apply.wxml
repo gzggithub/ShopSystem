@@ -1,0 +1,9 @@
+<!--pages/apply/apply.wxml-->
+<view class="apply_container">
+  <view class="apply_title">申请访问</view>
+  <view class="apply_main">
+    <view class='apply_main_mul'>
+    <navigator url='./newApply/newApply'>申请</navigator>
+    </view>
+  </view>
+</view>

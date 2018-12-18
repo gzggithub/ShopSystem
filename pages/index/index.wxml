@@ -1,0 +1,163 @@
+<!--index.wxml-->
+<!-- <import src="../../template/nav" /> -->
+<import src="../../template/tabbar/tabBar.wxml"/>
+
+
+<view class="home_container">
+  <view class="home_container_header">
+    <!-- <view class="home_container_header_welcome">{{welcome}}</view> -->
+    <!-- <view class="home_container_header_date">今天是{{date}}</view> -->
+
+    <view class='home_containier_calendar'>
+      <image bindtap='clickHistory' class="home_menu_history home_menu_down" src="../../image/xl-icon.png"></image>
+      <image bindtap='clickHistory' class="home_menu_history" src="../../image/menu.png"></image>
+      <calendar calendar-style="calendar" header-style="calendar-header" board-style="calendar-board" next='{{false}}' prev='{{false}}' show-more-days='true' days-color="{{dayStyle}}" weeks-type="cn" binddayClick="dayClick" />
+    </view>
+
+  </view>
+  <view class="home_container_main">
+    <!-- <view class="home_container_main_message">
+      <view class="home_container_main_message_title">未读消息</view>
+
+      <swiper indicator-active-color="#fdbb1b" previous-margin="30rpx" next-margin="30rpx" class='home_swiper_box'>
+        <block class="home_swiper">
+          <swiper-item>
+            <navigator url="./detail/detail" hover-class="navigator-hover">
+              <view class="home_swiper_box_first">
+                <view></view>
+                <view class="home-swiper_box_company">访问浙江中烟工业有限责任公司</view>
+                <view class="home-swiper_box_time">5月23日 上午9:10</view>
+              </view>
+            </navigator>
+          </swiper-item>
+
+          <swiper-item>
+            <navigator url="./detail/detail" hover-class="navigator-hover">
+              <view class="home_swiper_box_first">
+                <view class="home-swiper_box_company">访问浙江中烟工业有限责任公司</view>
+                <view class="home-swiper_box_time">5月23日 上午9:10</view>
+              </view>
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view> -->
+
+    <view class="home_container_main_schedule">
+      <view class="home_container_main_schedule_title">今日日程</view>
+
+      <!-- <block wx:for='{{items}}' wx:key="">
+        <navigator url="./detail/detail" hover-class="navigator-hover">
+          <view class="touch_item {{item.isTouchMove ? 'touch-move-active' : ''}} linear_blue border_radius" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+            <view class='content'>
+              <view class="content_company">{{item.content}}</view>
+              <view class="content_time">{{item.date}}</view>
+            </view>
+            <view class="del" catchtap="del" data-index="{{index}}">删除</view>
+          </view>
+        </navigator>
+
+        <view class='gray_line'></view>
+      </block> -->
+
+      <!-- <navigator url="./detail/detail" hover-class="navigator-hover">
+        <view class="home_swiper_box_first linear_blue touch-item {{item.isTouchMove ? 'touch-move-active' : ''}}" data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove">
+          <view>
+            <view class="home-swiper_box_company">访问浙江中烟工业有限责任公司</view>
+            <view class="home-swiper_box_time">5月23日 上午9:10</view>
+          </view>
+        </view>
+      </navigator>
+
+      <view class='gray_line'></view>
+
+      <navigator url="./detail/detail" hover-class="navigator-hover">
+        <view class="home_swiper_box_first linear_blue">
+          <view></view>
+          <view class="home-swiper_box_company">访问浙江中烟工业有限责任公司</view>
+          <view class="home-swiper_box_time">5月23日 上午9:10</view>
+        </view>
+      </navigator>
+
+      <view class='gray_line'></view>
+
+      <navigator url="./detail/detail" hover-class="navigator-hover">
+        <view class="home_swiper_box_first linear_blue">
+          <view></view>
+          <view class="home-swiper_box_company">访问浙江中烟工业有限责任公司</view>
+          <view class="home-swiper_box_time">5月23日 上午9:10</view>
+        </view>
+      </navigator>
+
+      <view class='gray_line'></view> -->
+
+      <swiper indicator-active-color="#fdbb1b" previous-margin="30rpx" next-margin="30rpx" class='home_swiper_box'>
+        <block class="home_swiper">
+          <swiper-item class='home_swiper_item' bindlongpress="deleteRecord" data-index="{{index}}">
+            <navigator url="./detail/detail" hover-class="navigator-hover">
+              <view class="home_swiper_box_first linear_blue">
+                <view></view>
+                <view>
+                  <view class="home-swiper_box_company">访问浙江中烟工业有限责任公司</view>
+                  <view class="home-swiper_box_time">5月23日 上午9:10</view>
+                </view>
+              </view>
+            </navigator>
+          </swiper-item>
+          <swiper-item class='home_swiper_item'>
+            <navigator url="./detail/detail" hover-class="navigator-hover">
+              <view class="home_swiper_box_first linear_blue">
+                <view></view>
+                <view>
+                  <view class="home-swiper_box_company">访问浙江中烟工业有限责任公司</view>
+                  <view class="home-swiper_box_time">5月23日 上午9:10</view>
+                </view>
+              </view>
+            </navigator>
+          </swiper-item>
+          <swiper-item class='home_swiper_item'>
+            <navigator url="./detail/detail" hover-class="navigator-hover">
+              <view class="home_swiper_box_first linear_blue">
+                <view></view>
+                <view>
+                  <view class="home-swiper_box_company">访问浙江中烟工业有限责任公司</view>
+                  <view class="home-swiper_box_time">5月23日 上午9:10</view>
+                </view>
+              </view>
+            </navigator>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <!-- <view class="home_container_main_more">
+      <navigator url="../history/history" hover-class="navigator-hover">查看更多</navigator>
+    </view> -->
+
+    <!-- <view></view> -->
+
+  </view>
+
+  <!-- <view class='create_apply' bindtap='applay'>
+    <view class='create_apply_inner'>
+      <view class='create_apply_inner_circul'>+</view>
+    </view>
+  </view> -->
+
+  <view class="home_container_footer"></view>
+
+
+  <!-- <view class="flex fix_nav_wp">
+    <block wx:for="{{navData}}">
+      <template is="tabBar" data="{{...item}}" />
+    </block>
+  </view> -->
+
+</view>
+
+<!-- <view class="flex fix_nav_wp">
+  <block wx:for="{{navData}}">
+    <template is="nav" data="{{...item}}" />
+  </block>
+</view> -->
+<!-- <template is="tabBar" data="{{tabBar:bindData.tabBar}}"/> -->

@@ -1,0 +1,45 @@
+<!--pages/info/info.wxml-->
+<view class='info_container'>
+  <view class='detail_item' style='border-top:1px solid #e0e0e0;border-bottom:none;margin:0;padding: 0 20px;'>
+    <view class='detail_item_left'>注册状态</view>
+    <view class='detail_item_right info_status'>已注册</view>
+  </view>
+
+  <view class='newApply_image' style='background:#eff3f7;position: relative'>
+    <view class='example'>示例</view>
+    <image src='../../image/group_13.png' mode="aspectFit" class="newApply_image_img"></image>
+  </view>
+
+  <view class="detail_item">
+    <view class="detail_item_left">姓名：</view>
+    <view class="detail_item_right">{{displayName}}
+      <!-- <input name='displayName' value='{{displayName}}' placeholder='请输入姓名' maxlength='12' bindinput="userNameInput" /> -->
+    </view>
+  </view>
+  <view class="detail_item">
+    <view class="detail_item_left">性別：</view>
+    <view class="detail_item_right">
+      <picker bindchange="bindViewEvent" data-model="component" data-method="bindSelect" data-name="index" value='{{index}}' range="{{gender}}">
+        <view class="label-right">
+          {{gender[index]}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="detail_item">
+    <view class="detail_item_left">出生年月：</view>
+    <view class="detail_item_right">
+      <picker mode="date" value="{{date}}" start="1970-01-01" end="2100-12-31" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="detail_item">
+    <view class="detail_item_left">联系电话：</view>
+    <view class="detail_item_right">{{phone_number}}
+      <!-- <input name='tel' type="number" value='{{phone_number}}' placeholder='请输入手机号' maxlength='11' bindinput="mobileInput" /> -->
+    </view>
+  </view>
+</view>

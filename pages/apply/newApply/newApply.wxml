@@ -1,0 +1,46 @@
+<!--pages/apply/newApply/newApply.wxml-->
+<import src='../../../template/progress' />
+<!-- <import src="../../template/nav" /> -->
+<import src="../../../template/tabbar/tabBar.wxml"/>
+
+<view class='newApply_container'>
+  <!-- <template is='progress'></template> -->
+  <view class='progress'>
+    <!-- <progress id='progress' percent='{{pageInfo}}' stroke-width='3' color='#207ce9'></progress> -->
+
+    <view class='progress_item' style='width:100%'>
+      <view class='progress_item progress_item_add' style='width:{{pageInfo}}%'></view>
+    </view>
+
+
+    <view class='progress_icon progress_{{pageInfo}}'>
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+
+  </view>
+
+  <view class='newApply_image'>
+    <image src='{{face_image}}' class="newApply_image_img"></image>
+  </view>
+
+  <view class='newApply_start' wx:if='{{apply_start}}'>
+    <button class='apply_btn' bindtap='clickstart'>点击开始</button>
+  </view>
+  <view class='newApply_start' wx:if='{{apply_next}}'>
+    <button class='apply_btn' bindtap='clickNext'>下一步</button>
+  </view>
+
+  <view class='newApply_tip' wx:if='{{apply_start}}'>
+    <text>首次申请需要识别您本人照片进行验证</text>
+  </view>
+</view>
+<!-- 
+<view class="flex fix_nav_wp">
+  <block wx:for="{{navData}}">
+    <template is="nav" data="{{...item}}" />
+  </block>
+</view> -->
+
+<template is="tabBar" data="{{tabBar:bindData.tabBar}}"/>

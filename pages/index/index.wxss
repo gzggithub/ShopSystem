@@ -1,0 +1,161 @@
+/**index.wxss**/
+
+.home_container_header {
+  background-color: #fff;
+}
+
+.home_container_header_welcome {
+  padding-left: 20px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  color: #2e2e39;
+}
+
+.home_container_header_date {
+  padding-left: 20px;
+  font-size: 14px;
+  color: #7c86a2;
+}
+
+.home_containier_calendar {
+  position: relative;
+}
+
+.home_menu_history {
+  width: 24rpx;
+  height: 24rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 40rpx;
+}
+
+.home_menu_history.home_menu_down {
+  width: 36rpx;
+  height: 18rpx;
+  top: 30rpx;
+  left: 240rpx;
+}
+
+/* 日历 */
+
+.calendar {
+  background-color: #fff;
+  padding-top: 10rpx;
+}
+
+.calendar-header {
+  width: 30%;
+  font-size: large;
+  color: #2e2e39;
+  padding-bottom: 34rpx;
+  /* padding-right: 40rpx; *//* position: relative;
+  top: -60rpx;
+  right: -350rpx; */
+}
+
+.calendar-board {
+  color: #7c86a2;
+  font-size: 14px;
+  /* margin-top: -60rpx; */
+}
+
+.calendar--calendar-weeks {
+  margin-bottom: 16rpx;
+}
+
+.calendar--calendar-cell {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  position: relative;
+  z-index: 99999999 !important;
+}
+/* 
+.calendar--calendar-cell::before{
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 10rpx;
+  background-color: #ec4412;
+  z-index: 999;
+}
+
+.calendar--calendar-cell::after{
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 20rpx;
+  background-color: #f5a623;
+  z-index: 9;
+} */
+
+.home_container_main {
+  padding-left: 10px;
+  /* background-color: #e0e0e0; */
+}
+
+.home_container_main_message_title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 14px;
+  color: #509702;
+}
+
+.home_swiper_box {
+  height: 148rpx;
+}
+
+.home_swiper_item {
+  box-sizing: border-box;
+  width: 476rpx !important;
+  padding-right: 20rpx !important;
+}
+
+.home_swiper_box_first {
+  box-sizing: border-box;
+  /* width: 100%; */
+  height: 148rpx;
+  padding-top: 32rpx;
+  padding-left: 32rpx;
+  padding-bottom: 30rpx;
+  border-radius: 5px;
+  /* background: linear-gradient(to right, #498fe1 3%, #fff 3%); */
+  background-color: #fff;
+}
+
+.home-swiper_box_company {
+  height: 40rpx;
+  line-height: 40rpx;
+  padding-bottom: 12rpx;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+
+.home-swiper_box_time {
+  height: 34rpx;
+  line-height: 34rpx;
+  font-size: 12px;
+  color: #979797;
+}
+
+.home_container_main_schedule_title {
+  padding-top: 50rpx;
+  padding-bottom: 22rpx;
+  padding-left: 26rpx;
+  font-size: 14px;
+  color: #7c86a2;
+}
+
+.home_container_main_more {
+  padding: 10px 0 20px;
+  text-align: center;
+  font-size: 12px;
+  color: #7c86a2;
+}

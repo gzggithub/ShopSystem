@@ -1,0 +1,96 @@
+<!--pages/index/detail/detail.wxml-->
+<view class="home_detail_container">
+  <view class="detail_item detail_item_first linear_red" wx:if="{{apply_stat==0}}">
+    <view class="detail_item_left">申请状态：</view>
+    <view class="detail_item_right font_red">未通过</view>
+  </view>
+  <view class="detail_item detail_item_first linear_orange" wx:if="{{apply_stat==1}}">
+    <view class="detail_item_left">申请状态：</view>
+    <view class="detail_item_right font_orange">审核中</view>
+  </view>
+  <view class="detail_item detail_item_first linear_blue" wx:if="{{apply_stat==2}}">
+    <view class="detail_item_left">申请状态：</view>
+    <view class="detail_item_right font_blue">已通过</view>
+  </view>
+
+  <view class="detail_item" wx:if='{{apply_stat==0}}'>
+    <view class="detail_item_left">被拒原因：</view>
+    <view class="detail_item_right">时间不合适</view>
+  </view>
+
+  <view class='gray_line' wx:if='{{apply_stat !==0}}'></view>
+
+  <view class='detail_item_remark' wx:if='{{apply_stat==0}}'>
+    <text>注：受访人下午3:10分后有空</text>
+  </view>
+
+  <view class="detail_item">
+    <view class="detail_item_left">来访目的：</view>
+    <view class="detail_item_right">项目合作</view>
+  </view>
+
+  <view class="detail_item">
+    <view class="detail_item_left">访问时间：</view>
+    <view class="detail_item_right font_red" wx:if="{{apply_stat==0}}">2018年5月2日 上午10:30</view>
+    <view class="detail_item_right font_orange" wx:if="{{apply_stat==1}}">2018年5月2日 上午10:30</view>
+    <view class="detail_item_right font_blue" wx:if="{{apply_stat==2}}">2018年5月2日 上午10:30</view>
+  </view>
+
+  <view class='gray_line'></view>
+
+  <view class="detail_item">
+    <view class="detail_item_left">受访人：</view>
+    <view class="detail_item_right">小薛</view>
+  </view>
+
+  <view class="detail_item">
+    <view class="detail_item_left">所属单位：</view>
+    <view class="detail_item_right">杭州快豹科技有限公司</view>
+  </view>
+
+  <view class="detail_item">
+    <view class="detail_item_left">在职部门：</view>
+    <view class="detail_item_right">技术部门</view>
+  </view>
+
+  <view class="detail_item">
+    <view class="detail_item_left">所在职位：</view>
+    <view class="detail_item_right">前端开发工程师</view>
+  </view>
+
+  <view class='gray_line'></view>
+
+  <view class="detail_item">
+    <view class="detail_item_left">访问人：</view>
+    <view class="detail_item_right">张三</view>
+  </view>
+
+  <view class="detail_item">
+    <view class="detail_item_left">所属单位：</view>
+    <view class="detail_item_right">浙江中烟工业责任有限公司</view>
+  </view>
+
+  <view class="detail_item">
+    <view class="detail_item_left">在职部门：</view>
+    <view class="detail_item_right">技术部门</view>
+  </view>
+  <view class="detail_item">
+    <view class="detail_item_left">所在职位：</view>
+    <view class="detail_item_right">IOS开发工程师</view>
+  </view>
+
+  <view class='gray_line'></view>
+
+  <view class="detail_item">
+    <view class="detail_item_left">申请时间：</view>
+    <view class="detail_item_right">4月1日上午10点</view>
+  </view>
+
+  <view class='gray_line'></view>
+
+  <view class='detail_restar_apply' wx:if='{{apply_stat==0}}'>
+    <navigator url='../../apply/newApply/newApply'>重新申请</navigator>
+  </view>
+
+  <view class='gray_line'></view>
+</view>

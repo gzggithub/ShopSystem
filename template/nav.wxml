@@ -1,0 +1,17 @@
+<template name="nav">
+      <view class="nav_link" bindtap="{{fn}}">
+        <button class="defalut_btn {{current==0?'':'on_cor'}}">
+          <block wx:if="{{style==0}}">
+                <!-- <icon class="iconfont {{ico}} del_ico idx_ico"></icon> -->
+                <image src='../../image/ico.png' style='width: 30px;height: 30px;'/>
+                <text class="txt">{{name}}</text>
+          </block>
+          <block wx:if="{{style==1}}">
+                <view class="plus_wp">
+                  <image src='../../image/plus_ico.png' class="plus_ico" />
+                </view>
+                <text class="txt txt_fb">{{name}}</text>
+          </block>
+        </button> 
+      </view>
+</template>

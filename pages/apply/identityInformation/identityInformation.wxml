@@ -1,0 +1,85 @@
+<!--pages/apply/identityInformation/identityInformation.wxml-->
+<import src='../../../template/progress' />
+
+<view class='newApply_container'>
+  <!-- <template is='progress'></template> -->
+
+  <view class='progress'>
+    <!-- <progress percent='{{pageInfo}}' stroke-width='3' color='#207ce9'></progress> -->
+
+    <view class='progress_item' style='width:100%'>
+      <view class='progress_item progress_item_add' style='width:{{pageInfo}}%'></view>
+    </view>
+
+
+    <view class='progress_icon progress_{{pageInfo}}'>
+      <view></view>
+      <view></view>
+      <view></view>
+    </view>
+
+  </view>
+
+  <form>
+    <view class="detail_item">
+      <view class="detail_item_left">姓名：</view>
+      <view class="detail_item_right">
+        <input name='ID-card' placeholder='' />
+      </view>
+    </view>
+    <view class="detail_item">
+      <view class="detail_item_left">性別：</view>
+      <view class="detail_item_right">
+        <picker bindchange="bindViewEvent" data-model="component" data-method="bindSelect" data-name="index" value='{{index}}' range="{{gender}}">
+          <view class="label-right">
+            {{gender[index]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="detail_item">
+      <view class="detail_item_left">身份证号：</view>
+      <view class="detail_item_right">
+        <input name='ID-card' type="idcard" placeholder='' />
+      </view>
+    </view>
+    <view class="detail_item">
+      <view class="detail_item_left">联系电话：</view>
+      <view class="detail_item_right">
+        <input name='tel' type="number" placeholder='' />
+      </view>
+    </view>
+    <view class="detail_item">
+      <view class="detail_item_left">邮箱：</view>
+      <view class="detail_item_right">
+        <input name='email' placeholder='' />
+      </view>
+    </view>
+    <view class="detail_item">
+      <view class="detail_item_left">所属单位：</view>
+      <view class="detail_item_right">
+        <input name='ID-card' placeholder='' />
+      </view>
+    </view>
+    <view class="detail_item">
+      <view class="detail_item_left">在职部门：</view>
+      <view class="detail_item_right">
+        <input name='ID-card' placeholder='' />
+      </view>
+    </view>
+    <view class="detail_item">
+      <view class="detail_item_left">所在职位：</view>
+      <view class="detail_item_right">
+        <input name='ID-card' placeholder='' />
+      </view>
+    </view>
+  </form>
+
+  <view class='newApply_start'>
+    <button class='apply_btn' bindtap='clickNext'>下一步</button>
+  </view>
+
+  <view class='newApply_tip'>
+    <text>请使用您本人的身份信息进行验证</text>
+  </view>
+</view>
